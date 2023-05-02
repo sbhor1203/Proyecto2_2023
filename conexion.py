@@ -1,3 +1,4 @@
+import neo4j 
 from neo4j import GraphDatabase
 import logging
 from neo4j.exceptions import ServiceUnavailable
@@ -8,9 +9,7 @@ class App:
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
 
     def close(self):
-        # Don't forget to close the driver connection when you are finished with it
         self.driver.close()
-
 
 
 
