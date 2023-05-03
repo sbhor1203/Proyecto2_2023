@@ -11,6 +11,24 @@ class App:
     def close(self):
         self.driver.close()
 
+    def _create_and_return_User(tx):
+        
+        query = (
+            "CREATE (:User { name: $@andres }) "
+            "CREATE (:User { name: $@luisa }) "
+            "CREATE (:User { name: $@daniel }) "
+            
+        )
+        result = tx.run(query)
+        try:
+            return [{"User": row["id"]["name"], "User": row["id"]["name"]}
+                    for row in result]
+       
+        except ServiceUnavailable as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
+
 
 
 
