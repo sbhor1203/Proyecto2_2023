@@ -1,7 +1,7 @@
 /// querys for the creation of the nodes, relations and all the things we are going to use
 
-CREATE (:User { name: "@andres" }), (:User { name: "@luisa" }), (:User { name: "@daniel" }) // primer ingreso de usuarios pruebas
-CREATE (:User { name: "@andrea" }), (:User { name: "@adriana" }), (:User { name: "@juan" }),(:User { name: "@Jorge" }),(:User { name: "@sofia" }) // other users
+CREATE (u:User { name: "@andres" }), ({ name: "@luisa" }), ({ name: "@daniel" }) // primer ingreso de usuarios pruebas
+CREATE (u:User { name: "@andrea" }), ({ name: "@adriana" }), ( { name: "@juan" }),({ name: "@Jorge" }),({ name: "@sofia" }) // other users
 
 
 
