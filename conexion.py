@@ -36,6 +36,6 @@ if __name__ == "__main__":
     
     uri = "neo4j+s://6c2a741f.databases.neo4j.io"
     user = "neo4j"
-    password = "<Password for Neo4j Aura instance>"
+    password = "zfvxXqRUkiARm_su7pKUpvYEgQiphPRbXGI7E9amTpg"
     app = App(uri, user, password)
     app.close()

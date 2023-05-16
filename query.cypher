@@ -3,7 +3,36 @@
 CREATE (u:User { name: "@andres" }), ({ name: "@luisa" }), ({ name: "@daniel" }) // primer ingreso de usuarios pruebas
 CREATE (u:User { name: "@andrea" }), ({ name: "@adriana" }), ( { name: "@juan" }),({ name: "@Jorge" }),({ name: "@sofia" }) // other users
 
+/////////////////////////////////
 
+MATCH (t:Type)
+WHERE t.name = 'Restaurante Italiano'
+CREATE (u:User { name: '@Isabella'})-[a:LIKES]->(t)
+return t
+
+MATCH (t:Type)
+WHERE t.name = 'Restaurante Japonés'
+CREATE (u:User { name: '@Emanuel'})-[a:LIKES]->(t)
+return t
+
+MATCH (t:Type)
+WHERE t.name = 'Restaurante Italiano'
+CREATE (u:User { name: '@Martina'})-[a:LIKES]->(t)
+return t
+
+MATCH (t:Type)
+WHERE t.name = 'Restaurante Indú'
+CREATE (u:User { name: '@Andrés'})-[a:LIKES]->(t)
+return t
+
+MATCH (t:Type)
+WHERE t.name = 'Restaurante Mexicano'
+CREATE (u:User { name: '@Andrés'})-[a:LIKES]->(t)
+return t
+
+
+
+/////////////////////////////
 
 CREATE (r:Restaurants { name: "Restaurantes" }) // query para poder almacenar restaurantes
 
